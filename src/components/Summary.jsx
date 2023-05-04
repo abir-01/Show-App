@@ -39,13 +39,14 @@ const Summary = () => {
       setisCleared(false);
     }, 2000);
   };
+  
 
 
   return (
     <div className='p-3'>
       <div>
         <h1><i>Summary of {myState && myState.show.name}</i> ...</h1><br />
-        <p>{myState && myState.show.summary.substring(3, myState.show.summary.length - 4)}</p></div>
+        <p dangerouslySetInnerHTML={{ __html: myState.show.summary}}></p></div>
 
 
 
